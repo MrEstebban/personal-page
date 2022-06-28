@@ -13,7 +13,7 @@ export const FrontPage = () => {
         <section id="mini-flag" className="d-inline">
           <img
             className="image-mini-flag-current"
-            src="../../assets/img/england-flag.png"
+            src="/assets/img/england-flag.png"
             alt="England Flag"
           />
 
@@ -24,7 +24,7 @@ export const FrontPage = () => {
           >
             <img
               className="image-mini-flag"
-              src="../../assets/img/spain-flag.png"
+              src="/assets/img/spain-flag.png"
               alt="Spain Flag"
             />
           </a>
@@ -33,7 +33,7 @@ export const FrontPage = () => {
           <span className="d-none d-lg-block"
           ><img
               className="img-fluid img-profile rounded-circle mx-auto mb-2"
-              src="./../../assets/img/profile.jpeg"
+              src="/assets/img/profile.jpeg"
               alt="Esteban Pedraza's profile picture"
             /></span>
         </a>
@@ -78,7 +78,7 @@ export const FrontPage = () => {
             <li className="nav-item">
               <a
                 className="btn btn-primary"
-                href="../../assets/files/CV_ESTEBAN_PEDRAZA_en.pdf"
+                href="/assets/files/CV_ESTEBAN_PEDRAZA_en.pdf"
                 target="_blank"
               >
                 Download my CV!
@@ -93,7 +93,7 @@ export const FrontPage = () => {
         <span className="d-block d-lg-none span-img">
           <img
             className="img-profile rounded-circle"
-            src="../../assets/img/profile.jpeg"
+            src="/assets/img/profile.jpeg"
             alt="Esteban Pedraza's profile picture"
           />
         </span>
