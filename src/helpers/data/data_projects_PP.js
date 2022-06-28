@@ -63,14 +63,5 @@ export const projects = [
         'desc_es': 'Esta SPA construida con React the ayuda a encontrar y listar tus gifs favoritos, todos los gifs vienen directamente desde Giphy.',
         'tools': 'React, React-DOM, JavaScript, HTML, CSS, Giphy API',
         'github_repo': 'gif-finder-app-react'
-    },
-    {
-        'title_en': '',
-        'desc_en': '',
-        'title_es': '',
-        'desc_es': '',
-        'tools': '',
-        'github_repo': ''
-    },
-
+    }
 ]
