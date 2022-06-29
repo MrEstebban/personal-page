@@ -63,5 +63,13 @@ export const projects = [
         'desc_es': 'Esta SPA construida con React the ayuda a encontrar y listar tus gifs favoritos, todos los gifs vienen directamente desde Giphy.',
         'tools': 'React, React-DOM, JavaScript, HTML, CSS, Giphy API',
         'github_repo': 'gif-finder-app-react'
+    },
+    {
+        'title_en': 'Heroes Catalogue with React',
+        'desc_en': 'This SPA built with React helps you find and list your favorite heroes of DC and marvel and get specific info about each hero.',
+        'title_es': 'Catálogo de Heroes con React',
+        'desc_es': 'Esta SPA construida con React the ayuda a encontrar y listar tus heroes favoritos de DC y marvel y obtener información específica de cada heroe.',
+        'tools': 'React, React-DOM, JavaScript, HTML, CSS, Bootstrap, Animate.css',
+        'github_repo': 'heroes-catalogue-react-spa'
     }
 ]
