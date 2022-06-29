@@ -7,7 +7,7 @@ export const ProjectsCard = (props) => {
     return (
         <div className="card" >
             <img
-                src={`/assets/img/projects/screenshot-${props.github_repo}.png`}
+                src={`./assets/img/projects/screenshot-${props.github_repo}.png`}
                 className="card-img-top"
                 alt={`screenshot-${props.github_repo}`}
             />
