@@ -1,4 +1,4 @@
-import {projects} from '../data/data_projects_PP';
+import {projects} from '../../../public/assets/data/data_projects_PP';
 
 export const getProjectsData = ()=>{
 

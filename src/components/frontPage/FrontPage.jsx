@@ -1,7 +1,21 @@
+import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { ProjectsGrid } from "../projectsGrid/ProjectsGrid";
 
 export const FrontPage = () => {
+
+  const [languageEn, setLanguageEn] = useState(true);
+
+  const handleOnClickFlags = (flagClicked)=>{
+
+    if(flagClicked === 'spanish-flag' && languageEn){
+      setLanguageEn(false);
+    }
+    if(flagClicked === 'english-flag' && !languageEn){
+      setLanguageEn(true);
+    }
+
+  }
 
   return (
     <>
@@ -12,22 +26,22 @@ export const FrontPage = () => {
         {/* <!--Mini Flags --> */}
         <section id="mini-flag" className="d-inline">
           <img
-            className="image-mini-flag-current"
+            className={`mini-flag ${languageEn ? 'image-mini-flag-current' : 'image-mini-flag'}`}
             src="./assets/img/england-flag.png"
-            alt="England Flag"
+            alt={languageEn ? 'Go site in English' : 'Ir al sitio en inglés' }
+            title={languageEn ? 'Go site in English' : 'Ir al sitio en inglés' }
+            onClick={() => handleOnClickFlags('english-flag')}
+
           />
 
-          <a
-            className="mini-flag mr-0"
-            href="#"
-            title="Go site in Spanish"
-          >
-            <img
-              className="image-mini-flag"
-              src="./assets/img/spain-flag.png"
-              alt="Spain Flag"
-            />
-          </a>
+          <img
+            className={`mini-flag ${languageEn ? 'image-mini-flag' : 'image-mini-flag-current'}`}
+            src="./assets/img/spain-flag.png"
+            alt={languageEn ? 'Go site in Spanish' : 'Ir al sitio en español' }
+            title={languageEn ? 'Go site in Spanish' : 'Ir al sitio en español' }
+            onClick={() => handleOnClickFlags('spanish-flag')}
+          />
+
         </section>
         <a className="navbar-brand js-scroll-trigger" href="#about">
           <span className="d-none d-lg-block"
@@ -59,7 +73,7 @@ export const FrontPage = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-              >About</Link>
+              >{languageEn ? 'About' : 'Acerca de'}</Link>
             </li>
             <li className="nav-item">
               <Link
@@ -68,9 +82,9 @@ export const FrontPage = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                
+
                 duration={500}
-              >Projects</Link>
+              >{languageEn ? 'Projects' : 'Proyectos'}</Link>
             </li>
             {/* <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#projects">Projects</a>
@@ -78,10 +92,10 @@ export const FrontPage = () => {
             <li className="nav-item">
               <a
                 className="btn btn-primary"
-                href="./assets/files/CV_ESTEBAN_PEDRAZA_en.pdf"
+                href={`./assets/files/CV_ESTEBAN_PEDRAZA_${languageEn ? 'en': 'es'}.pdf`}
                 target="_blank"
               >
-                Download my CV!
+                { languageEn ? 'Download my CV!' : '¡Descarga mi CV!'}
               </a>
             </li>
           </ul>
@@ -122,15 +136,13 @@ export const FrontPage = () => {
               ></a>
             </div>
             <p className="lead mb-4">
-              Hi! 👋🏼, I´m passionate about technology, as I see it as a way to
-              support the day-to-day lives of people. I'm new to blockchain but
-              very aware of the impact that can have and it's having nowadays
-              along with AI. <br /><br />
-              ✔ I´m currently working with back-end (Java, Node, Microservices)
-              but I've also worked with front-end (React, Angular). <br />
-              ✔ I like to explain complex ideas and abstract concepts and
-              translate them into a way that is easy to understand.<br />
-              ✔ I'm a native Spanish speaker and I speak english.
+              {languageEn ? 'Hi! 👋🏼, I´m passionate about technology, as I see it as a way to support the day-to-day lives of people. I\'m new to blockchain but very aware of the impact that can have and it\'s having nowadays along with AI.' : '¡Hola! 👋🏼, Soy un desarrollador de software apasionado por la tecnología. Soy nuevo en el ecosistema blockchain pero estoy muy al tanto del impacto que puede tener y está teniendo en el mundo junto con la Inteligencia Artificial.'}
+               <br /><br />
+               {languageEn ? '✔ I´m currently working with back-end (Java, Node, Microservices) but I\'ve also worked with front-end (React, Angular).' : '✔ Actualmente trabajo con tecnologías back-end (Java, Node, Microservicios) pero también he trabajado con tecnologías front-end (React, Angular).'}
+              <br />
+              {languageEn ?  '✔ I like to explain complex ideas and abstract concepts and translate them into a way that is easy to understand.' : '✔ Me gusta comunicar y aprender ideas complejas y conceptos abstractos de manera fácil de entender.'}
+              <br />
+              {languageEn ? '✔ I\'m a native Spanish speaker and I speak english.' : '✔ Soy hablante nativo en español, pero también hablo bien el inglés.'}
             </p>
           </div>
         </section>
@@ -138,8 +150,8 @@ export const FrontPage = () => {
 
         {/* <!-- Projects--> */}
 
-        <ProjectsGrid />
-        
+        <ProjectsGrid languageEn={languageEn} />
+
       </div>
 
     </>

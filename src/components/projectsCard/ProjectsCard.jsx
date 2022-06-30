@@ -12,12 +12,12 @@ export const ProjectsCard = (props) => {
                 alt={`screenshot-${props.github_repo}`}
             />
             <div className="card-body">
-                <h5 className="card-title">{props.title_en}</h5>
+                <h5 className="card-title">{props.languageEn ? props.title_en : props.title_es}</h5>
                 <p className="card-text">
-                    {props.desc_en}
+                    {props.languageEn ? props.desc_en : props.desc_es}
                 </p>
                 <p>
-                    <b>Tecnologies: </b> {props.tools}
+                    <b>{props.languageEn ? 'Tecnologies:' : 'Tecnologías:' }</b> {props.tools}
                 </p>
                 <a
                     href={props.page_preview === undefined ? `https://mrestebban.github.io/${props.github_repo}` : props.page_preview }

@@ -45,7 +45,8 @@ export const projects = [
         'title_es': 'Catalogo de Heroes Angular',
         'desc_es': 'Esta es una SPA (Single Page Application) hecha con Angular que puede ayudartes a encontrar información acerca de los heroes más importantes de Marvel y DC comics.',
         'tools': 'Angular 10+, HTML, CSS, TypeScript, Bootstrap, Jquery, JavaScript',
-        'github_repo': 'heroes-catalogue-angular'
+        'github_repo': 'heroes-catalogue-angular',
+        'page_preview': 'https://mrestebban.github.io/heroes-catalogue-angular/#/heroes'
     },
     {
         'title_en': 'To-Do List with Ionic',
